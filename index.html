@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<link rel="stylesheet" href="./static/css/normalize.min.css" media="screen">
+	<link rel="stylesheet" href="./static/css/modal.min.css" media="screen">
+
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<style>
+		.photoLink {
+			text-decoration: none;
+		}
+
+		.material-symbols-outlined {
+			font-size: 30px;
+			font-variation-settings:
+				'FILL' 0,
+				'wght' 400,
+				'GRAD' 0,
+				'opsz' 48
+		}
+	</style>
+
+
+	<script type="text/javascript" src="./static/js/jquery.min.js"></script>
+	<script type="text/javascript" src="./static/js/astc.min.js"></script>
+
+	<script>
+		$(function () {
+			window.modal = {
+				getModal: function (title = 'Заголовок', descr = 'Описание', modal_class = '') {
+					var modal_template = `
+							<div class="modal_bg">
+								<div class="modal_body ${modal_class}">
+									<div class="modal_close">
+										<span class="material-symbols-outlined">close</span>
+										</div>
+									<div class="modal_inner">
+										<div class="modal_title">${title}</div>
+										<div class="modal_descr">${descr}</div>
+									</div>
+								</div>
+							</div>`;
+					$('body').append(modal_template);
+					$('body').addClass('modal2');
+				},
+				init: function () {
+					$('body').on('click', '.modal_close', function () {
+						$(this).parent().parent().remove();
+						$('body').removeClass('modal2');
+					});
+					$('body').on('click', '.modal_body', function (e) {
+						e.stopPropagation();
+					});
+					$('body').on('click', '.modal_bg', function (e) {
+						$(this).find('.modal_close').click();
+					});
+				}
+			};
+			window.modal.init();
+		});
+	</script>
+
+	<script type="text/javascript" src="./static/js/underscore-min.js"></script>
+
+	<script>window.tobiz = { "project_id": "168856", "project_domain": "", "page_title": "\u0441\u0430\u0439\u0442 \u0431\u0438\u0431\u043b\u0438\u043e\u0442\u0435\u043a\u0438", "page_dir": "", "personal_seo_configs": "1", "seo_title": "", "seo_keywords": "", "seo_description": "", "OG_image": "", "access_control": "0", "valid_login": "", "valid_password": "", "pp": "0", "rep_id": "264674", "user_id": "2", "owner_email": "mail@gmail.com", "user_email": "templates@tobiz.net", "user_pnf": "0.00", "bs": true, "t": "5", "free": 0, "products_on": "0", "articles_on": "0", "page_config": { "title_font": "Georgia, serif", "text_font": "Montserrat, sans-serif", "menu_font": "Montserrat, sans-serif", "btn_font": "Montserrat, sans-serif", "link_color": "#f78960" }, "showIntro": 0, "w": 1, "basket_conf": null }</script>
+
+	<link rel="stylesheet" href="./static/css/tobiz.min.css">
+
+	<script type="text/javascript" src="./static/js/script.min.js"></script>
+	<script type="text/javascript" src="./static/js/auth.js"></script>
+	<script type="text/javascript">tobiz.blocks = [];</script>
+
+	<meta content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+	<link rel="stylesheet" href="./static/css/media.min.css">
+	<meta name="format-detection" content="telephone=no">
+
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<title>Научная библиотека</title>
+
+
+
+	<script src="./static/js/scriptHtml.js"></script>
+
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com/">
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+	<link href="./static/css/css2.css" rel="stylesheet">
+
+	<style id="page_style">
+		body,
+		#wrapper {
+			font-family: Montserrat, sans-serif;
+		}
+
+		.section .section_inner .title {
+			font-family: Georgia, serif;
+		}
+
+		a {
+			color: #f78960;
+		}
+
+		.section .btn1 {
+			font-family: Montserrat, sans-serif, sans-serif;
+		}
+
+		.section .btn2 {
+			font-family: Montserrat, sans-serif, sans-serif;
+		}
+
+		.section .btn3 {
+			font-family: Montserrat, sans-serif, sans-serif;
+		}
+
+		.section .submit_btn {
+			font-family: Montserrat, sans-serif, sans-serif;
+		}
+
+		:root {
+			--cookie_btn_font: Montserrat, sans-serif--cookie_btn_bg:;
+			--cookie_btn_bg_hover: ;
+			--cookie_btn_color: #fff;
+		}
+
+		#wrapper .menu li,
+		#wrapper .menu1 li,
+		#wrapper .menu2 li,
+		#wrapper .menu3 li {
+			font-family: Montserrat, sans-serif;
+		}
+	</style>
+
+	<link rel="stylesheet" href="./static/css/css.css" type="text/css">
+	<link rel="stylesheet" href="./static/css/icon.css" type="text/css">
+	<link rel="stylesheet" href="./static/css/fa.min.css" type="text/css">
+</head>
+
+<body class="editor_false lang_ru not_ie">
+	<div class="alerts"></div>
+	<div id="wrapper" style="padding-top: 0px;">
+		<div class="hide_line section section2116" style=" background-color:#fff;
+			background-image:url(/static/img/null.png); position: fixed;
+			z-index: 500;" data-id="2478125" id="b_2478125">
+			<a name="a_2478125"></a>
+
+			<div class="noise" style="background-image:url(/img/null.png);"></div>
+			<div class="section_inner logo_left">
+
+				<div class="wrapp">
+					<div class="menu-toogler">
+						<span class="material-symbols-outlined">
+							menu
+						</span>
+					</div>
+					<div class="logo">
+						<div class="logo_img"><img data-lazy="1" alt="" src="./static/img/partner/logo_oshsu.png"></div>
+					</div>
+
+					<div class="menu1 menu_block animate_menu3"
+						style="color:#212121; background-color:#fff; font-size: 18px">
+						<ul>
+							<li class="level0 dropdown"><a href="#">Главная</a></li>
+							<li class="level0"><a href="#anchor2" title="Книги">Книги </a></li>
+							<li class="level0"><a href="#anchor1" title="Популярное">Популярное</a></li>
+							<li class="level0"><a href="#anchor7" title="Новости">Новости</a></li>
+							<li class="level0"><a href="#anchor4" title="Издательства">Ресурсы библиотеки</a></li>
+							<li class="level0"><a href="#anchor5" title="О библиотеке">О библиотеке</a></li>
+							<li class="level0"><a href="#anchor6" title="Услуги">История</a></li>
+							<li class="level0"><a href="#anchor3" title="Структура">Структура</a></li>
+							<li class="level0"><a href="#anchor8" title="Контакты">Контакты</a></li>
+
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div data-hcolor="#ff6600" class="section no_fontsize section153"
+			style="background-color:#ffffff; background-image:url(/static/img/bg_head.jpg); margin-top: 85px; padding-top:100px; padding-bottom:50px;"
+			data-id="2477866" id="b_2477866"><a name="a_2410757"></a>
+
+
+			<div class="dark"></div>
+			<div class="noise" style="background-image:url(/img/null.png);"></div>
+			<div class="noise_new " style="background-image:url(/img/null.png); opacity:0.5;"></div>
+			<div class="section_inner all_border    w450h60 ">
+				<div class="layer">
+					<div class="title">
+						<p><strong><span style="font-size:72px">Добро пожаловать</span></strong></p>
+						<p><strong><span style="font-size:72px">на сайт библиотеки</span></strong></p>
+					</div>
+					<div class="sub_title">
+						<p><br></p>
+					</div>
+
+					<div class="btn1 surround dark" data-hcolor="#f78960"
+						style="background-color:#A00E07;  border-radius: 2em;   box-shadow: 0;  font-size: 18px;   ">
+						Найти свою книгу</div>
+					<div class="btn_descr"></div>
+				</div>
+
+				<div class="popup_form">
+					<div class="popup_form_inner">
+						<div class="popup_form_close"><span class="material-symbols-outlined">
+								close
+							</span></div>
+						<div class="popup_form_title">Оставить заявку</div>
+						<form action="" enctype="multipart/form-data" method="post">
+							<div class="form1"><input type="hidden" name="Название формы" value="">
+								<div class="field">
+									<div class="field_title ">Введите имя</div>
+									<div class="field_description"></div>
+									<div class="field_input field_input_text"><input type="text" required="required"
+											name="Введите имя" placeholder="Введите имя" autocomplete="off"></div>
+								</div>
+								<div class="field">
+									<div class="field_title  ">Введите E-mail</div>
+									<div class="field_description"></div>
+									<div class="field_input field_input_email"><input type="email" required="required"
+											name="Введите E-mail" placeholder="mail@mail.ru" autocomplete="off"></div>
+								</div>
+								<div class="field">
+									<div class="field_title  ">Введите номер телефона</div>
+									<div class="field_description"></div>
+									<div class="field_input field_input_phone"><input type="text" required="required"
+											pattern="[+)( .-]*[0-9]+[0-9+)( .-]*" minlength="6"
+											name="Введите номер телефона" placeholder="xxx-xxx-xxx" autocomplete="off">
+									</div>
+								</div>
+								<div class="field">
+									<div class="field_input"><input type="submit" class="submit_btn surround dark"
+											data-hcolor="#f78960" data-action="thanks" data-metrica_event="undefined"
+											data-fb_pixel="undefined" data-vk_pixel="undefined"
+											data-gtag_event="undefined" data-url="" data-amount="0"
+											data-product_name="undefined" value="Отправить"
+											style="background-color:#f78960;    border-radius: 2em; ;  box-shadow: 0; ; font-size: 18px; "
+											autocomplete="off"></div>
+								</div>
+							</div>
+						</form>
+						<div class="popup_form_text">Нажимая на кнопку, Вы принимаете <a target="_blank"
+								href="https://168856.lp.tobiz.net/?personal_data=1">Положение</a> и <a target="_blank"
+								href="https://168856.lp.tobiz.net/?personal_data=2">Согласие</a> на обработку
+							персональных данных.</div>
+					</div>
+				</div>
+
+
+				<div class="popup_thanks">
+					<div class="popup_thanks_inner">
+						<div class="popup_thanks_close">X</div>
+						<div class="popup_thanks_title">Спасибо за заявку!</div>
+						<div class="popup_thanks_text">Заявка отправлена. Наш менеджер свяжется с Вами в ближайшее
+							время.</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div data-autoslide="0" class="hide_line section section151"
+			style="background-color:#ffffff;  background-image:url(/static/img/null.png); padding-top:90px; padding-bottom:20px;"
+			data-id="2477884" id="b_2477884"><a name="anchor2"></a>
+
+
+			<div class="noise" style="background-image:url(static/img/null.png);"></div>
+			<div class="noise_new " style="background-image:url(static/img/null.png); opacity:0.5;"></div>
+			<div class="section_inner  width1170">
+				<div class="title"><span style="font-size:40px"><span style="font-family:montserrat"></span></span><span
+						style="color:#424242;"><span style="font-size:50px;">Откройте для себя новую
+							книгу</span></span><span style="font-size:40px"><span
+							style="font-family:montserrat"></span></span></div>
+				<!-- <div class="sub_title">
+					<div><br></div>
+					<div><br></div>
+				</div> -->
+
+				<div class="arr1 ">
+					<div class="col_4">
+						<a href="#">
+							<div class="image1 "><img data-lazy="1" alt="" src="./static/img/vihr.jpg"></div>
+							<div class="overlay_image_box">
+							</div>
+						</a>
+					</div>
+					<div class="col_4">
+						<a href="#">
+							<div class="image2 "><img data-lazy="1" alt="" src="./static/img/king.jpg"></div>
+							<div class="overlay_image_box">
+							</div>
+						</a>
+					</div>
+					<div class="clear480"></div>
+					<div class="col_4">
+						<a href="#">
+							<div class="image3 "><img data-lazy="1" alt="" src="./static/img/kvini.jpg"></div>
+							<div class="overlay_image_box">
+							</div>
+						</a>
+					</div>
+					<div class="col_4 last">
+						<a href="#">
+							<div class="image4 "><img data-lazy="1" alt="" src="./static/img/detective.jpg"></div>
+							<div class="overlay_image_box">
+							</div>
+						</a>
+					</div>
+				</div>
+
+				<div class="arr1 ">
+					<div class="col_4">
+						<a href="#">
+							<div class="image1 "><img data-lazy="1" alt="" src="./static/img/durnay.jpg"></div>
+							<div class="overlay_image_box">
+							</div>
+						</a>
+					</div>
+					<div class="col_4">
+						<a href="#">
+							<div class="image2 "><img data-lazy="1" alt="" src="./static/img/ika.jpg"></div>
+							<div class="overlay_image_box">
+							</div>
+						</a>
+					</div>
+					<div class="clear480"></div>
+					<div class="col_4">
+						<a href="#">
+							<div class="image3 "><img data-lazy="1" alt="" src="./static/img/knijniy.jpg"></div>
+							<div class="overlay_image_box">
+							</div>
+						</a>
+					</div>
+					<div class="col_4 last">
+						<a href="#">
+							<div class="image4 "><img data-lazy="1" alt="" src="./static/img/sall.jpg"></div>
+							<div class="overlay_image_box">
+							</div>
+						</a>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+
+		<div data-hcolor="#ff6600" data-autoslide="0" class="size_900x1200 hide_line section section126"
+			style="background-color:#fcf5ed;  background-image:url(/static/img/null.png); padding-top:90px; padding-bottom:60px;"
+			data-id="2477867" id="b_2477867"><a name="anchor1"></a>
+
+
+			<div class="noise" style="background-image:url(static/img/null.png);"></div>
+			<div class="noise_new " style="background-image:url(static/img/null.png); opacity:0.5;"></div>
+			<div class="section_inner all_border    ">
+				<div class="title"><span style="color:#424242;"><span style="font-size:50px;">Самая популярная книга в
+							этом месяце</span></span></div>
+				<div class="sub_title"><span style="font-size:20px;">Рассказываем о том, какая книга пользуется
+						популярностью среди читателей</span></div>
+
+
+				<div class="arr1 ">
+
+					<div data-link="" class="image1   size_900x1200 "><img data-lazy="1" alt=""
+							src="./static/img/ika.jpg"></div>
+
+
+					<div class="right size_900x1200">
+						<div class="title1">
+							<div><span style="color:#424242"><span style="font-size:20px">Роулинг
+										Дж.К.</span></span><br><span style="color:#424242"><span
+										style="font-size:20px"></span></span></div>
+							<div><span style="color:#424242"><strong><span style="font-size:24px">Икабог (сказка для
+											детей)</span></strong></span></div>
+						</div>
+						<div class="txt1">
+							<p><span style="font-size:17px">Когда-то королевство Корникопия было самым богатым и
+									счастливым в мире. Король славился невообразимо красивыми усами. Кондитеры,
+									колбасники, сыровары и виноделы изобретали такие вкусные лакомства и напитки, что
+									те, кому посчастливилось их отведать, плакали от счастья. Страна процветала, народ
+									радовался. Всё бы хорошо, но в туманном, мрачном Смурланде, расположенном на севере
+									королевства, ходили слухи об Икабоге, страшном болотном чудовище. Никто не верил в
+									существование монстра из детской сказки, пока однажды ночной кошмар не стал явью.
+									Неужели сказочное чудовище одолеет короля и разрушит благополучие целого
+									государства? Неужели сказка, рассказанная на ночь, обернётся для двух маленьких
+									детей смертельно опасным приключением? Неужели надежда, правда и верная дружба
+									смогут победить даже самую страшную беду?</span><span style="font-size:17px"></span>
+							</p>
+						</div>
+
+
+
+						<div class="btn1 surround   dark" data-hcolor="#f78960"
+							style="background-color:#f78960;  border-radius: 2em;   box-shadow: 0;  font-size: 16px;   ">
+							Узнать подробнее</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+
+
+		<!-- <div class="hide_line section section144"
+			style="background-color:#ffffff;  background-image:url(/static/img/null.png); padding-top:0px; padding-bottom:0px;"
+			data-id="2478131" id="b_2478131"><a name="a_2478131"></a>
+
+			<div class="noise" style="background-image:url(/static/img/null.png);"></div>
+
+			<div class="section_inner">
+
+
+				<div class="images">
+
+					<div class="image_box   img_zoom  image_size_600x450 arr1 ">
+						<img data-lazy="1" data-src="/static/img/1.jpg" alt="">
+						<div class="overlay_image_box  active_off" data-link="" data-link-target="0">
+							<div class="overlay_image_title"></div>
+							<div class="overlay_image_descr"></div>
+						</div>
+					</div>
+
+					<div class="image_box   img_zoom  image_size_600x450 arr1 ">
+						<img data-lazy="1" data-src="/static/img/3b6d831617f9314c59a4128c467495b6.jpg" alt="">
+						<div class="overlay_image_box  active_off" data-link="" data-link-target="0">
+							<div class="overlay_image_title"></div>
+							<div class="overlay_image_descr"></div>
+						</div>
+					</div>
+
+					<div class="image_box   img_zoom  image_size_600x450 arr1 ">
+						<img data-lazy="1" data-src="/static/img/5fdae10f431cfa9cc7718f1f8ec60fac.jpg" alt="">
+						<div class="overlay_image_box  active_off" data-link="" data-link-target="0">
+							<div class="overlay_image_title"></div>
+							<div class="overlay_image_descr"></div>
+						</div>
+					</div>
+
+					<div class="image_box img_zoom image_size_600x450 arr1 ">
+						<img data-lazy="1" data-src="/static/img/fced1082ab42df4fcc1fdd2a94ecfad9.jpg" alt="">
+						<div class="overlay_image_box  active_off" data-link="" data-link-target="0">
+							<div class="overlay_image_title"></div>
+							<div class="overlay_image_descr"></div>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+		</div> -->
+
+		<div data-hcolor="#ff6600" class="hide_line   section       no_image     section301"
+			style="background-color:#ffffff;  background-image:url(/static/img/image_10047.jpg); padding-top:90px; padding-bottom:70px;"
+			data-id="2478093" id="b_2478093"><a name="anchor7"></a>
+
+
+			<div class="noise" style="background-image:url(/img/null.png);"></div>
+			<div class="noise_new " style="background-image:url(/img/null.png); opacity:0.5;"></div>
+			<div class="section_inner    width1170">
+				<div class="title"><strong><span style="color:#444444"><span style="font-family:montserrat"><span
+									style="font-size:48px"></span></span></span></strong><span
+						style="color:#424242;"><span style="font-size:50px;">Новости в нашем
+							блоге</span></span><strong><span style="color:#f74f4f"><span
+								style="font-family:montserrat"><span
+									style="font-size:48px"></span></span></span></strong></div>
+				<div class="sub_title">
+					<p><span style="color:#000000"><span style="font-size:22px"></span></span><span
+							style="font-size:20px">Рассказываем о наиболее популярных новостях из мира
+							литературы</span><span style="color:#000000"><span style="font-size:22px"></span></span></p>
+				</div>
+
+				<div class="arr1 size_700x500  btn_under_text ">
+					<div data-link="" class="image1  size_700x500 "><img data-lazy="1" data-src="static/img/1.jpg"
+							alt=""></div>
+					<div class="right size_700x500  btn_under_text ">
+						<div class="txt1">
+							<p><span style="color:#424242"><span style="font-size:20px"><strong>Вышел фильм об Андрее
+											Платонове</strong></span></span></p>
+							<p><br></p>
+							<p><span style="font-family:montserrat"><span style="font-size:17px">5 ноября в кинотеатрах
+										состоялась премьера фильма «Сокровенный человек», который рассказывает о жизни
+										гонимого при жизни писателя Андрея Платонова. Режиссёр картины Рома Либеров
+										известен своими литературными проектами в кино: свои прежние работы он посвятил
+										Ильфу и Петрову, Олеше, Довлатову.</span></span></p>
+						</div>
+
+					</div>
+				</div>
+
+
+				<div class="arr1 size_700x500  btn_under_text ">
+					<div data-link="" class="image1  size_700x500 "><img data-lazy="1" data-src="static/img/2.jpeg"
+							alt=""></div>
+					<div class="right size_700x500  btn_under_text ">
+						<div class="txt1">
+							<p><span style="color:#424242"><span style="font-size:20px"><strong>Актер Мэттью МакКонахи
+											написал книгу</strong></span></span><br></p>
+							<p><span style="font-family:montserrat"><span style="font-size:17px"><br></span></span></p>
+							<p><span style="font-family:montserrat"><span style="font-size:17px">На протяжении последних
+										35 лет МакКонахи вёл личные дневники, а недавно решил собрать их воедино в одной
+										книге. Релиз мемуаров голливудского актёра состоялся 20 октября. В книге
+										«Зелёные огни» – так называется биография – отражены самые яркие и эмоциональные
+										моменты из жизни и карьеры МакКонахи.</span></span></p>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="arr1 size_700x500  btn_under_text ">
+					<div data-link="" class="image1  size_700x500 "><img data-lazy="1" data-src="static/img/2.jpeg"
+							alt=""></div>
+					<div class="right size_700x500  btn_under_text ">
+						<div class="txt1">
+							<p><span style="color:#424242"><span style="font-size:20px"><strong>Выйдет сериал по книгам
+											Пратчетта</strong></span></span><br></p>
+							<p><span style="font-family:montserrat"><span style="font-size:17px"><br></span></span></p>
+							<p><span style="font-family:montserrat"><span style="font-size:17px">«Стража» – новый
+										британский сериал, который основан на цикле романов Терри Пратчетта «Плоский
+										мир» и подцикле о Городской страже Анк-Морпорка. Проект станет вольной
+										адаптацией книг автора: создатели сериала решили в точности не передавать на
+										экране оригинал. Вместо этого акцент сделан на дух и атмосферу
+										первоисточника.</span></span></p>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="hide_line section section1152"
+			style="background-color:#fcf5ed;  background-image:url(/static/img/null.png); padding-top:90px; padding-bottom:80px;"
+			data-id="2477878" id="b_2477878"><a name="anchor4"></a>
+
+			<div class="noise" style="background-image:url(/static/img/null.png);"></div>
+			<div class="noise_new " style="background-image:url(/static/img/null.png); opacity:0.5;"></div>
+			<div class="section_inner">
+				<div class="title"><span style="font-size:50px;">Ресурсы библиотеки</span></div>
+				<div class="sub_title"><br>
+					<div><br></div>
+				</div>
+				<div class="images">
+
+					<div class="image_box  arr1 ">
+						<a href="https://lib.oshsu.kg/CGI/irbis64r_plus/cgiirbis_64_ft.exe?C21COM=F&I21DBN=OSU_FULLTEXT&P21DBN=OSU&Z21ID=&S21CNR=5"
+							target="_blank">
+							<div class="img1116" style="background-image:url(/static/img/partner/logo_ilbirs.png)">
+							</div>
+							<div class="overlay_image_box" data-link-target="" data-link="">
+							</div>
+						</a>
+					</div>
+
+					<div class="image_box  arr1 ">
+						<a href="https://ibooks.oshsu.kg/" target="_blank">
+							<div class="img1116" style="background-image:url(/static/img/partner/logo_ibook.png)"></div>
+							<div class="overlay_image_box" data-link-target="" data-link="">
+							</div>
+						</a>
+					</div>
+
+					<div class="image_box  arr1 ">
+						<a href="https://www.oshsu.kg/ru" target="_blank">
+							<div class="img1116" style="background-image:url(/static/img/partner/logo_oshsu.png)"></div>
+							<div class="overlay_image_box" data-link-target="" data-link="">
+							</div>
+						</a>
+					</div>
+
+					<div class="image_box  arr1 ">
+						<a href="#" target="_blank">
+							<div class="img1116" style="background-image:url(/static/img/partner/libkg.png)"></div>
+							<div class="overlay_image_box" data-link-target="" data-link="">
+							</div>
+						</a>
+					</div>
+
+					<div class="image_box  arr1 ">
+						<a href="https://www.cochranelibrary.com/" target="_blank">
+							<div class="img1116"
+								style="background-image:url(/static/img/partner/logo_cochraneLibrary.png)"></div>
+							<div class="overlay_image_box" data-link-target="" data-link="">
+							</div>
+						</a>
+					</div>
+
+					<div class="image_box  arr1 ">
+						<a href="https://web.s.ebscohost.com/ehost/search/basic?vid=0&sid=b395a146-fb18-4585-9e41-f9e3345fab9e%40redis"
+							target="_blank">
+							<div class="img1116" style="background-image:url(/static/img/partner/logo_ebsco.png)"></div>
+							<div class="overlay_image_box" data-link-target="" data-link="">
+							</div>
+						</a>
+					</div>
+
+					<div class="image_box  arr1 ">
+						<a href="https://www.elibrary.ru/defaultx.asp" target="_blank">
+							<div class="img1116" style="background-image:url(/static/img/partner/logo_elibrary.png)">
+							</div>
+							<div class="overlay_image_box" data-link-target="" data-link="">
+							</div>
+						</a>
+					</div>
+
+					<div class="image_box  arr1 ">
+						<a href="https://kyrlibnet.kg/ru/" target="_blank">
+							<div class="img1116" style="background-image:url(/static/img/partner/logo_kirlibnet.png)">
+							</div>
+							<div class="overlay_image_box" data-link-target="" data-link="">
+							</div>
+						</a>
+					</div>
+
+					<div class="image_box  arr1 ">
+						<a href="#" target="_blank">
+							<div class="img1116" style="background-image:url(/static/img/partner/logo_KR.png)"></div>
+							<div class="overlay_image_box" data-link-target="" data-link="">
+							</div>
+						</a>
+					</div>
+
+					<div class="image_box  arr1 ">
+						<a href="http://library.manas.edu.kg/index.php/ru/" target="_blank">
+							<div class="img1116" style="background-image:url(/static/img/partner/logo_lib.png)"></div>
+							<div class="overlay_image_box" data-link-target="" data-link="">
+							</div>
+						</a>
+					</div>
+
+					<div class="image_box  arr1 ">
+						<a href="https://edu.gov.kg/" target="_blank">
+							<div class="img1116" style="background-image:url(/static/img/partner/logo_minis.png)"></div>
+							<div class="overlay_image_box" data-link-target="" data-link="">
+							</div>
+						</a>
+					</div>
+
+					<div class="image_box  arr1 ">
+						<a href="https://vak.kg/" target="_blank">
+							<div class="img1116" style="background-image:url(/static/img/partner/logo_nasia.png)"></div>
+							<div class="overlay_image_box" data-link-target="" data-link="">
+							</div>
+						</a>
+					</div>
+
+					<div class="image_box  arr1 ">
+						<a href="#" target="_blank">
+							<div class="img1116" style="background-image:url(/static/img/partner/logo_neb.png)"></div>
+							<div class="overlay_image_box" data-link-target="" data-link="">
+							</div>
+						</a>
+					</div>
+
+					<div class="image_box  arr1 ">
+						<a href="https://msp.org/publications/" target="_blank">
+							<div class="img1116" style="background-image:url(/static/img/partner/msp.png)"></div>
+							<div class="overlay_image_box" data-link-target="" data-link="">
+							</div>
+						</a>
+					</div>
+
+					<div class="image_box  arr1 ">
+						<a href="https://www.okuma.kg/" target="_blank">
+							<div class="img1116" style="background-image:url(/static/img/partner/logo_okuma.png)"></div>
+							<div class="overlay_image_box" data-link-target="" data-link="">
+							</div>
+						</a>
+					</div>
+
+					<div class="image_box  arr1 ">
+						<a href="https://www.wiley.com/en-us/customer-success/wiley-online-library-translated-resources/wiley-online-library-translated-resources-in-russian"
+							target="_blank">
+							<div class="img1116" style="background-image:url(/static/img/partner/logo_wiley.png)"></div>
+							<div class="overlay_image_box" data-link-target="" data-link="">
+							</div>
+						</a>
+					</div>
+
+					<div class="image_box  arr1 ">
+						<a href="#" target="_blank">
+							<div class="img1116" style="background-image:url(/static/img/partner/logo_window.png)">
+							</div>
+							<div class="overlay_image_box" data-link-target="" data-link="">
+							</div>
+						</a>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+
+		<div class="hide_line section section226"
+			style="background-color:#ffffff;  background-image:url(/static/img/null.png); padding-top:90px; padding-bottom:60px;"
+			data-id="2478096" id="b_2478096"><a name="anchor5"></a>
+
+
+			<div class="noise" style="background-image:url(/static/img/null.png);"></div>
+			<div class="noise_new " style="background-image:url(/static/img/null.png); opacity:0.5;"></div>
+			<div class="section_inner   width1170  ">
+				<div class="title"><span style="color:#424242"><span style="font-size:50px">Приходите к нам в
+							библиотеку</span></span></div>
+				<div class="sub_title"><span style="font-size:20px">В нашей библиотеке сделано все для комфорта
+						читателей</span></div>
+
+				<div data-link="" class="arr1 size_900x700">
+
+					<div class="image1 size_900x700 rightt  border" ><img data-lazy="1"
+							data-src="/static/img/come_here.jpg" alt=""></div>
+
+					<div class="txt1" style="padding-bottom: 10px;">
+						<div><span style="font-size:17px">Наша миссия - открытая одновременно с университетом в 1939 г., исторически видит свое призвание в содействии Миссии ОшГУ и удовлетворении информационных потребностей университетского сообщества. Научная библиотека Ошского государственного университета видит свою миссию в содействии повышению качества образования и науки в ОшГУ посредством предоставления инновационных библиотечно-информационных продуктов и услуг исследователям, преподавателям, студентам университета и его партнерам.</span></div>
+						<div><br></div>
+						<div><span style="font-size:17px">Формировать библиотечно-информационные ресурсы, расширяя взаимодействие с факультетами и научно-исследовательскими подразделениями Университета. Обеспечивать развитие библиотеки как ресурсного центра, гарантируя исследователям, преподавателям и студентам получение необходимой им информации. Создавать и предлагать современные информационные продукты и услуги, поддерживающие исследовательскую и преподавательскую деятельность на каждом этапе обеспечивать доступность всех ресурсов НБ, в том числе публикаций Ош ГУ, в мировом информационном пространстве. </span></div>
+						<div><span style="font-size:17px"><br></span></div>
+						<div><span style="font-size:17px">Содействовать развитию информационной культуры и совершенствовать исследовательские компетенции студентов, аспирантов, преподавателей. Быть открытой инновациям. Обеспечивать лидирующие позиции в области библиотечного обслуживания и технологий; транслировать передовой опыт в профессиональное сообщество университетских библиотек Кыргызстана. Обеспечивать сохранность уникальных книжных коллекций НБ Ош ГУ для будущих поколений и их доступность в мировом информационном пространстве.
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+		<div data-hcolor="#ff6600"
+			class="s_mode_c_icon hide_line     inner_width           section             transparent_ico section130"
+			style="background-color:#fcf5ed;  background-image:url(/static/img/null.png); padding-top:90px; padding-bottom:60px;"
+			data-id="2477883" id="b_2477883"><a name="anchor6"></a>
+
+
+			<div class="noise" style="background-image:url(/static/img/null.png);"></div>
+			<div class="noise_new " style="background-image:url(/static/img/null.png); opacity:0.5;"></div>
+			<div class="section_inner all_border  ">
+				<div class="title"><span style="color:#424242;"><span style="font-size:50px;">История</span></span>
+				</div>
+				<div class="sub_title"><span style="font-size:20px;">Смотрите </span></div>
+				<div class="catalog_items count2 c_icon">
+
+					<div class="card" style="width: 100%;">
+						<a href="#" class="photoLink">
+
+							<div class="slider">
+								<img src="./static/img/2.jpeg" class="card-img-top" alt="...">
+								<img src="./static/img/2.jpeg" class="card-img-top" alt="...">
+								<img src="./static/img/2.jpeg" class="card-img-top" alt="...">
+							</div>
+
+							<div class="card-body">
+								<h3 class="card-title" style="margin: 10px; text-align: center;">Научная библиотека
+									Ошского Государственного университета активно и плодотворно функционирует с 1939
+									года со дня основания данного учебного заведения. На основе постановления №1142
+									совета народных комиссаров Кыргызстана от 10 августа 1939 года была образована
+									Ошская школа учителей, в 1951 году постановлением №1759 правительства СССР – Ошский
+									Государственный педагогический институт, с 17 июня 1992 года согласно постановлению
+									№202 президента КР был создан Ошский Государственный Университет.</h3>
+								<p class="card-text">Люди, руководящие и внесшие большой вклад в создание научной
+									библиотеки университета: А.И. Федова, Ф.Х. Дауранова, К. Турсунова, А.В. Ильяева,
+									М.Ю. Клебанова.
+
+									1947–1996 годы под руководством М.Ю. Клебановой фонд библиотеки был переписан в
+									инвентарные журналы, были составлены алфавитные, системные и рабочие каталоги.
+
+									1996–2005 годы А. Г. Ибрагимова работала директором научной библиотеки. В эти годы
+									фонд библиотеки пополнился учебниками, научно–методическими пособиями,
+									диссертациями, словарями и другими книгами, общее количество, которых превысило 730
+									тысяч. Фонд библиотеки достиг 812661 единиц.
+
+									2005–2009 годы С. С. Токтомамбетова работала в качестве директора научной
+									библиотеки.
+									<br>
+
+									С 2009 по 2011 год научная библиотека университета находилась в ведении Департамента
+									новых технологий и инвестиций, действовали четыре центральные библиотеки и три
+									отдела. Первым заведующим кафедрой был кандидат биологических наук, доцент Эркебаев
+									Т.К., затем заведующим кафедрой был кандидат педагогических наук, доцент, депутат
+									городского совета Жоробеков Т.А. В это время книжный фонд научной библиотеки
+									составлял 880 000 экземпляров.
+
+								</p>
+							</div>
+						</a>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+
+		<!-- СТРУКТУРА -->
+		<div data-hcolor="#ff6600"
+			class="s_mode_s120 hide_line inner_width img_square section transparent_ico section130"
+			style="background-color:#ffffff;  background-image:url(/static/img/null.png); padding-top:90px; padding-bottom:60px;"
+			data-id="2477971" id="b_2477971"><a name="anchor3"></a>
+
+			<div class="noise" style="background-image:url(/static/img/null.png);"></div>
+			<div class="noise_new " style="background-image:url(/static/img/null.png); opacity:0.5;"></div>
+			<div class="section_inner all_border">
+				<div class="title"><span style="color:#424242"><span style="font-size:50px">Структура</span></span>
+				</div>
+				<div class="sub_title"><br></div>
+				<div class="catalog_items count3 s120">
+
+
+					<div class="arr1 ">
+						<div class="col_4">
+							<div class="col_bg" style="opacity:0; background: #FFFFFF;"></div>
+
+							<div data-link="" class="image1  s120  radius"><img data-lazy="1"
+									data-src="/static/img/f9f419770611675183017e4aadd38279.jpg" alt=""></div>
+
+							<div class="title1"><u><span style="font-size:20px">Директор</span></u></div>
+						</div>
+
+					</div>
+
+
+
+					<div class="arr1 ">
+						<div class="col_4">
+							<div class="col_bg" style="opacity:0; background: #FFFFFF;"></div>
+
+							<div data-link="" class="image1  s120  radius"><img data-lazy="1"
+									data-src="/static/img/d3bf28918d82987949a17d0272020c2f.jpg" alt=""></div>
+
+							<div class="title1"><u><span style="font-size:20px">Информационно-библиографический
+										отдел</span></u></div>
+
+						</div>
+					</div>
+
+
+
+					<div class="arr1 ">
+						<div class="col_4">
+							<div class="col_bg" style="opacity:0; background: #FFFFFF;"></div>
+
+							<div data-link="" class="image1  s120  radius"><img data-lazy="1"
+									data-src="./static/img/b9b33de3baa6cae2d8104bf508d2d4a2.jpg" alt=""></div>
+
+							<div class="title1"><u><span style="font-size:20px">Брайан</span></u></div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- FOOTER -->
+		<div class="hide_line   section           section165"
+			style="background-color:#fcf5ed;  background-image:url(/static/img/null.png);" data-id="2478111"
+			id="b_2478111"><a name="anchor8"></a>
+
+
+			<div class="noise" style="background-image:url(/img/null.png);"></div>
+			<div class="section_inner    ">
+
+
+				<div class="map_wrapper ">
+					<div class="map">
+						<div class="map_inner">
+							<iframe
+								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12575.530861290063!2d72.78783150035065!3d40.53256605608795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bdac04fccc99a9%3A0x408c6ca57e96bdb1!2z0JHQuNCx0LvQuNC-0YLQtdC60LAg0J7RiNCT0KM!5e0!3m2!1sru!2skg!4v1682654845718!5m2!1sru!2skg"
+								width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+								referrerpolicy="no-referrer-when-downgrade"></iframe>
+						</div>
+					</div>
+				</div>
+				<div class="text_block " style="background-color: #fcf5ed ">
+					<div class="text"><span style="font-size:17px">Контактная информация:</span>
+						<ul>
+							<li>Кыргызстан, 723500, г. Ош, ул. Борубаева 2, ОшГУ</li>
+							<li>E-mail: library@oshsu.kg</li>
+							<li>Телефон: +996 3222 7-22-73</li>
+							<li>Телефон факс: +996 3222 7-09-15</li>
+							<li>Директор: А. А. Эсекеева</li>
+						</ul>
+					</div>
+					<div class="txt1"><span style="font-size:17px;">Присоединяйтесь к нам в социальных сетях!</span>
+					</div>
+					<div class="social_icons ">
+						<a target="_blank" class="sn" href="#">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="red" class="bi bi-youtube"
+								viewBox="0 0 16 16">
+								<path
+									d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" />
+							</svg>
+
+							</i>
+						</a>
+						<!-- <a target="_blank" class="sn"
+							href="https://168856.lp.tobiz.net/?v=264674&amp;show_install_panel=true">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="blue" class="bi bi-telegram" viewBox="0 0 16 16">
+								<path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/>
+							  </svg></a> -->
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- COPYRITE -->
+		<div class="hide_line   section               section119"
+			style="background-color:#fcf5ed;  background-image:url(/static/img/null.png);" data-id="2478128"
+			id="b_2478128"><a name="a_2478128"></a>
+
+
+			<div class="noise" style="background-image:url(/img/null.png);"></div>
+			<div class="section_inner width1170">
+
+
+				<div class="logo_img"><img data-lazy="1" data-src="/img/400x0/tobiz_logo_def_black.png" alt=""></div>
+
+
+				<div class="address-and-ua">
+
+					<div class="address1"><span style="font-size:17px;">Главный корпус Общий отдел: +996 3222 7-22-73,
+							факс +996 3222 7-09-15,
+							edu@oshsu.kg</span></div>
+					<div class="policy2">Политика конфиденциальности</div>
+				</div>
+				<div class="phone-and-address">
+					<!-- <div class="phone1 zphone show_phone_icon">+996 3222 7-09-15</div> -->
+					<div class="text1">Ошский государственный университет Официальный сайт НАУЧНАЯ БИБЛИОТЕКА</div>
+					<a target="_blank" href="#" class="tobiz_link ">©2023 OshSU</a>
+					<div class="social_icons  hidden  ">
+						<a target="_blank" class="sn sn-vk  link_vk"
+							href="https://168856.lp.tobiz.net/?v=264674&amp;show_install_panel=true"></a>
+						<a target="_blank" class="sn sn-ins  link_ins"
+							href="https://168856.lp.tobiz.net/?v=264674&amp;show_install_panel=true"></a>
+
+					</div>
+				</div>
+				<div class="policy2_popup">
+					<div class="policy2_title">Политика конфиденциальности</div>
+					<div class="policy2_body">
+						<p>Данный сайт уважает Ваше право и соблюдает конфиденциальность при заполнении, передаче и
+							хранении Ваших конфиденциальных сведений.<br>Размещение заявки на данном сайте означает Ваше
+							согласие на обработку данных и дальнейшей передачи ваших контактных данных нашей
+							компании.<br>Под персональными данными подразумевается информация, относящаяся к субъекту
+							персональных данных, в частности имя, контактные реквизиты (адрес электронной почты) и иные
+							данные, относимые Федеральным законом от 27 июля 2006 года № 152-ФЗ «О персональных данных»
+							к категории персональных данных.<br>Целью обработки персональных данных является
+							информирование об оказываемых услугах нашей компании.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script>
+		(function () {
+			var resources_css = [
+				'https://fonts.googleapis.com/css?family=Roboto&display=swap',
+				'https://fonts.googleapis.com/icon?family=Material+Icons&display=swap',
+				'/fonts/font-awesome-4.7.0/css/fa.min.css'
+			];
+			var resource = [];
+			_.each(resources_css, function (element, index) {
+				resource[index] = document.createElement('link');
+				resource[index].setAttribute("rel", "stylesheet");
+				resource[index].setAttribute("href", element);
+				resource[index].setAttribute("type", "text/css");
+
+				var head = document.getElementsByTagName('head')[0];
+				head.appendChild(resource[index]);
+
+			});
+
+		})();
+	</script>
+
+	<script type="text/javascript" src="./static/js/mask.min.js" defer=""></script>
+	<script type="text/javascript" src="./static/js/lazyload.min.js"></script>
+	<script type="text/javascript" src="./static/js/anime.min.js" defer=""></script>
+
+	<script type="text/javascript" src="./static/js/json.txt" defer=""></script>
+</body>
+
+</html>
